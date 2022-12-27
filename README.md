@@ -20,7 +20,7 @@ Install Composer (http://getcomposer.org) and run
 ```
 docker-compose build
 ```
-1. Start docker on background
+3. Start docker on background
 
 ```
 docker-compose up -d
