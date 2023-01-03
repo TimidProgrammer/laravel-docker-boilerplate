@@ -32,5 +32,5 @@ docker-compose up -d
 docker-compose run --rm composer create-project laravel/laravel ./
 ```
 > Note: If you are running docker as root, make sure to change the permission of the `src` folder created to the current logged user
-> Run the command `sudo chown -r \$USER:\$USER ./../src/. 
+> Run the command `sudo chown -R \$USER:\$USER ./../src/. 
 
