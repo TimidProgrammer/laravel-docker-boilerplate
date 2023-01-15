@@ -59,3 +59,9 @@ docker-compose run --rm composer create-project laravel/laravel ./
 > Note: If you are running docker as root, make sure to change the permission of the `src` folder created to the current logged user
 > Run the command `sudo chown -R \$USER:\$USER ./../src/. 
 
+
+5. On the generated `.env`, change the value of `DB_HOST` to `database` as this is running on docker
+*E.g.* `COMPOSE_PROJECT_NAME=your-laravel-project-name`
+```
+DB_HOST=your-laravel-project-name-mysql
+```
