@@ -14,6 +14,24 @@ Install Composer (http://getcomposer.org) and run
 
 - [x] **Docker compose**
 
+### Setup.sh
+
+Run sh file `setup.sh` to start docker
+
+```
+./setup.sh
+```
+
+Run sh file `setup-laravel.sh` to install laravel
+
+```
+./setup.sh
+```
+
+
+### Step by Step installation
+If you wanted to install docker manually:
+
 1. Open terminal on docker folder
 
 2. Build the images of docker
