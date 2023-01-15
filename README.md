@@ -14,6 +14,13 @@ Install Composer (http://getcomposer.org) and run
 
 - [x] **Docker compose**
 
+
+To set docker name container for your project initial,
+Change `COMPOSE_PROJECT_NAME` on the `docker/.env`
+```
+COMPOSE_PROJECT_NAME=your-laravel-project-name
+```
+
 ### Setup.sh
 
 Run sh file `setup.sh` to start docker

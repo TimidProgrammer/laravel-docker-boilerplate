@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   nginx:
+    container_name: ${COMPOSE_PROJECT_NAME}-nginx
     build:
       context: .
       dockerfile: nginx.dockerfile
@@ -12,6 +13,7 @@ services:
       - mysql
       - php
   mysql:
+    container_name: ${COMPOSE_PROJECT_NAME}-mysql
     image: mariadb:10.5
     ports:
       - 3306:3306
@@ -23,12 +25,14 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
   php: 
+    container_name: ${COMPOSE_PROJECT_NAME}-php-fpm
     build:
       context: .
       dockerfile: php.dockerfile
     volumes:
       - ./../src:/var/www/html
   composer:
+    container_name: ${COMPOSE_PROJECT_NAME}-composer
     build:
       context: .
       dockerfile: composer.dockerfile
@@ -36,12 +40,14 @@ services:
       - ./../src:/var/www/html
     working_dir:  /var/www/html
   npm:
+    container_name: ${COMPOSE_PROJECT_NAME}-npm
     image: node:current-alpine
     volumes:
       - ./../src:/var/www/html
     entrypoint: ["npm"]
     working_dir: /var/www/html
   artisan:
+    container_name: ${COMPOSE_PROJECT_NAME}-artisan
     build:
       context: .
       dockerfile: php.dockerfile
